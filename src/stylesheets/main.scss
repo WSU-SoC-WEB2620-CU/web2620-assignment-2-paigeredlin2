@@ -1,1 +1,97 @@
-// Your styles go here
+body{
+    font-size: 16px; 
+    margin: 0;
+}
+header{
+    background-color: rgb(213, 181, 181);
+    height: 6rem;
+    margin-bottom: .5rem;
+}
+.holder-holder{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.holder{
+    background-color: black;
+    height: 2.5rem;
+    margin: .5rem 0;
+}
+.column-main{
+    background-color: rgb(213, 181, 181);
+    height: 20rem;
+    margin: .5rem 0;
+}
+.column-aside{
+    display: flex;
+}
+.top-boxes{
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.box{
+    background-color: black;
+    height: 4rem;
+    margin: .5rem 0;
+}
+.empty_space{
+    flex: 1;
+    background-color: rgb(213, 181, 181);
+    height: 19rem;
+    margin: .5rem 0;  
+}
+footer{
+    background-color: rgb(213, 181, 181);
+    height: 6rem;
+    margin-top:.5rem;
+}
+@media all and (min-width: 500px){
+    .holder-holder{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .holder{
+        width: 17%;
+        height: 5rem;
+    }
+    .top-boxes{
+        flex: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    .box{
+        flex: 40%;
+        width: calc((40% - 2rem)/2);
+        height: calc((100% - 2rem)/2);
+        margin: .5rem .5rem 0 0;
+    }
+    .empty_space{
+        flex: 40%;
+        height: 19rem;}
+}
+@media all and (min-width: 800px){
+    .flex{
+    display: flex;
+    flex-flow: row nowrap;
+    }
+    .column-main{
+        flex: 60%;
+        height: 40rem;
+    }
+    .column-aside{
+        flex-flow: column;
+        flex: 40%;
+    }
+    .box{
+        flex: 1 0 1;
+        width: 12rem;
+        height: calc(50% - 1rem);
+        margin: .5rem 0 0 .5rem;
+    }
+    .empty_space{
+        flex: 40%;
+        height: 19.5rem;
+        order: -1;
+        margin-left: .5rem;}
+}
